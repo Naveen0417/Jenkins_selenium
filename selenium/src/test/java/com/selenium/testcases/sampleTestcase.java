@@ -20,6 +20,7 @@ public class sampleTestcase {
 	public void launchBrowser() throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
+		driver.manage().window().maximize();
 		System.out.println("At BeforeClass");
 	}
 
