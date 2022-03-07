@@ -3,6 +3,7 @@ package com.selenium.testcases;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -35,8 +36,8 @@ public class sampleTestcase {
 	@Test
 	public void getPageTitle() throws InterruptedException {
 		Thread.sleep(3000);
-		System.out.println(driver.getTitle());
-	
+		String PageTitle = driver.getTitle();
+		Assert.assertEquals("Guru99 Bank Manager HomePage", PageTitle);
 	}
 
 	@AfterMethod
