@@ -40,8 +40,7 @@ public class sampleTestcase {
 	}
 
 	@AfterMethod
-	public void logout() throws InterruptedException {
-		Thread.sleep(3000);
+	public void logout() throws InterruptedException {		
 		driver.findElement(By.xpath("//a[text()='Log out']")).click();
 		driver.switchTo().alert().accept();
 		System.out.println("At AfterMethod");
